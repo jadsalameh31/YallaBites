@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RolesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('welcome');
 });
-//hello world
+Route::post('/roles', [RolesController::class, 'store'])->name('roles.store');
+Route::get('/roles', [RolesController::class, 'index'])->name('roles.index');
