@@ -21,3 +21,7 @@ Route::get('/home', function () {
 Route::get('Index', function(){
     return view('Index');
 });
+
+Route::get('Dashboard', function(){
+    return view('Dashboard');
+});
