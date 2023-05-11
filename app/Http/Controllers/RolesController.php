@@ -19,7 +19,7 @@ class RolesController extends Controller
         $role->name = $request->name;
         $role->save();
 
-        return redirect()->route('roles.index')->with('success', 'Role added successfully');
+        return redirect()->route('index')->with('success', 'Role added successfully');
     }
 
     public function index()
@@ -27,6 +27,6 @@ class RolesController extends Controller
         // Retrieve all roles from the database
         $roles = Roles::all();
 
-        return view('roles.index', compact('roles'));
+        return view('index', compact('roles'));
     }
 }

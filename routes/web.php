@@ -17,5 +17,5 @@ use App\Http\Controllers\RolesController;
 Route::get('/home', function () {
     return view('welcome');
 });
-Route::post('/roles', [RolesController::class, 'store'])->name('roles.store');
-Route::get('/roles', [RolesController::class, 'index'])->name('roles.index');
+Route::post('/roles', [RolesController::class, 'store'])->name('store');
+Route::get('/roles', [RolesController::class, 'index'])->name('index');
